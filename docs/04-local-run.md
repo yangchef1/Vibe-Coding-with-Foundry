@@ -18,19 +18,6 @@ API_PORT=8787
 
 액세스 토큰이나 API 키는 `.env`에 넣지 않습니다.
 
-## Azure 로그인 확인
-
-PowerShell에서 Foundry 프로젝트에 접근할 계정으로 로그인합니다.
-
-```powershell
-az login
-az account list --output table
-az account set --subscription "구독 이름 또는 ID"
-az account show --output table
-```
-
-구독이 하나라면 `az account set`은 생략할 수 있습니다. 로그인한 사용자에게 프로젝트 범위의 `Foundry User` 역할이 있어야 합니다.
-
 ## 앱 실행
 
 ```powershell
@@ -44,20 +31,6 @@ npm run dev:full
 ```
 
 `dev:full` 터미널은 실행한 상태로 둡니다. 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열고 화면에 **연결 준비 완료**가 표시되는지 확인합니다.
-
-## Health API 확인
-
-브라우저에서 [http://localhost:3000/api/health](http://localhost:3000/api/health)을 엽니다. HTTP 200과 다음 응답이 표시되어야 합니다.
-
-```json
-{
-  "status": "ok",
-  "mode": "live",
-  "configured": true
-}
-```
-
-`configured`가 `false`이면 `.env`의 `FOUNDRY_PROJECT_ENDPOINT`와 `FOUNDRY_AGENT_NAME`을 확인하고 `dev:full`을 다시 시작합니다.
 
 ## 교육용 고객정보 자동 채우기
 
