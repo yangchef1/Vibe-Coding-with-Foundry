@@ -14,7 +14,7 @@
 3. 왼쪽 메뉴에서 `Agents`를 클릭합니다.
 4. `Create agent`를 클릭합니다.
 5. Agent 이름에 `fund-recommender-<alias>`를 입력하고 `<alias>`를 본인의 영문 alias로 바꿉니다.
-6. 앞 단계에서 확인한 모델 배포를 선택합니다.
+6. 앞 단계에서 배포한 `gpt-5.4`를 선택합니다.
 7. `Instructions`에 아래 지침을 붙여 넣습니다.
 
     ```text

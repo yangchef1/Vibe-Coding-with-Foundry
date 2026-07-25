@@ -20,19 +20,20 @@ Microsoft Foundry와 GitHub Copilot app을 이용해 정책자금 추천과 영�
 
 - Node.js, npm, Git 설치 확인
 - GitHub Copilot app 로그인 및 Agent 세션 확인
-- Azure 구독, Foundry 프로젝트, 모델 배포 정보 확인
+- Azure 구독과 Foundry 및 File Search 권한 확인
 - 실습 리소스 이름 규칙 확인
 
 ---
 
 ### [2. Azure 구독 및 CLI 설정](./2.%20Azure%20구독%20및%20CLI%20설정/README.md)
 
-Azure CLI를 설치하고 교육용 계정으로 로그인한 뒤, 사용할 Foundry 프로젝트와 연결 정보를 확인합니다.
+Azure CLI로 교육용 구독에 로그인한 뒤, New Microsoft Foundry 프로젝트를 만들고 모델을 배포합니다.
 
 - Azure CLI 설치 및 로그인
-- 교육용 Azure 구독 선택
-- New Microsoft Foundry 프로젝트 접속
-- 모델 배포와 프로젝트 엔드포인트 확인
+- Enter 키로 교육용 Azure 구독 선택 완료
+- New Microsoft Foundry 프로젝트 생성
+- `gpt-5.4` 모델 배포
+- 프로젝트 Home에서 엔드포인트 위치 확인
 
 ---
 

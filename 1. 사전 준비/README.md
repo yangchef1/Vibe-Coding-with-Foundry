@@ -32,10 +32,11 @@ git --version
 
 - 교육용 Azure 계정
 - 교육용 Azure 구독
-- New Microsoft Foundry 프로젝트
-- 사용할 모델 배포
-- Foundry 프로젝트 접근 권한
+- New Microsoft Foundry 프로젝트를 생성할 권한
+- `gpt-5.4` 모델을 배포할 수 있는 구독과 지역
 - File Search 파일 업로드 권한
+
+Foundry 프로젝트 생성과 모델 배포는 다음 단계에서 직접 수행합니다.
 
 File Search에 필요한 역할과 할당 범위는 아래 `File Search 필수 권한 추가`에서 확인합니다.
 

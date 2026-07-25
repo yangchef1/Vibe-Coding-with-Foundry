@@ -68,7 +68,25 @@ Copilot이 파일 생성이나 명령 실행을 요청하면 내용을 확인하
 
 ## 두 Foundry Agent 연결
 
-앞 단계에서 메모장에 기록한 실제 값으로 아래 세 줄의 오른쪽을 바꾼 뒤 전체 프롬프트를 붙여 넣습니다. 프로젝트 엔드포인트와 Agent 이름은 암호나 API 키가 아닙니다.
+### 필요한 연결 값 가져오기
+
+연동 프롬프트를 입력하기 직전에 Foundry에서 현재 값을 가져옵니다.
+
+1. 브라우저에서 [Microsoft Foundry](https://ai.azure.com)를 열고 `bnk-workshop-<alias>` 프로젝트를 선택합니다.
+2. 상단 `Home`을 클릭합니다.
+3. 화면 아래 `Project endpoint` 옆의 복사 버튼을 클릭합니다.
+
+    ![Microsoft Foundry Home에서 Project endpoint 복사](../2.%20Azure%20구독%20및%20CLI%20설정/images/foundry-project-home.png)
+
+4. `API key`와 `Azure OpenAI endpoint`는 복사하지 않습니다.
+5. 상단 `Build` > 왼쪽 `Agents`로 이동해 앞 단계에서 만든 다음 두 Agent 이름을 확인합니다.
+
+    - `fund-recommender-<alias>`
+    - `branch-opinion-writer-<alias>`
+
+6. 방금 확인한 값을 아래 프롬프트의 세 줄에 직접 붙여 넣습니다. 별도 메모장 파일로 저장하지 않습니다.
+
+프로젝트 엔드포인트와 Agent 이름은 암호나 API 키가 아닙니다. 프로젝트 엔드포인트 끝에 `/openai/v1`이나 `/responses`를 추가하지 않습니다.
 
 ```text
 현재 앱의 모의 응답을 Microsoft Foundry의 두 Prompt Agent 호출로 교체해 주세요.
