@@ -10,16 +10,15 @@ Microsoft Foundry와 GitHub Copilot app을 이용해 정책자금 추천과 영�
 - **영업점 의견서 Agent**: 추천 결과와 영업점 메모를 바탕으로 의견서 초안을 만듭니다.
 - **상담 웹 애플리케이션**: 두 Agent를 하나의 업무 흐름으로 연결합니다.
 
-실습 자료의 정책자금 정보는 교육용 가상 데이터입니다. 실제 금융 상담, 자격 판정, 여신 심사에는 사용할 수 없습니다.
+실습에서는 `2026년도 부산광역시 중소기업 자금지원계획 공고`를 검색 근거로 사용합니다. Agent의 결과는 사전 검토용이며 실제 금융 상담, 자격 판정, 여신 심사 결과를 대신하지 않습니다.
 
 ## 실습 순서
 
 ### [1. 사전 준비](./1.%20사전%20준비/README.md)
 
-실습에 필요한 로컬 도구, GitHub Copilot app, Azure 계정 정보, 이름 규칙, 정책자금 데이터 파일을 확인합니다.
+실습에 필요한 로컬 도구, Azure 계정 정보, 이름 규칙, 정책자금 데이터 파일을 확인합니다.
 
 - Node.js, npm, Git 설치 확인
-- GitHub Copilot app 로그인 및 Agent 세션 확인
 - Azure 구독과 Foundry 및 File Search 권한 확인
 - 실습 리소스 이름 규칙 확인
 
@@ -52,6 +51,7 @@ Azure CLI로 교육용 구독에 로그인한 뒤, New Microsoft Foundry 프로�
 
 빈 로컬 폴더에서 웹 애플리케이션을 만들고 두 Foundry Agent를 연결합니다.
 
+- GitHub Copilot app 로그인 확인
 - 빈 폴더와 로컬 Agent 세션 생성
 - 화면과 모의 업무 흐름 생성
 - Microsoft Entra 인증과 Foundry Responses API 연동
@@ -88,7 +88,7 @@ Azure CLI로 교육용 구독에 로그인한 뒤, New Microsoft Foundry 프로�
 │   ├── README.md
 │   └── images/
 └── data/
-	└── policy-funds-sample.md
+	└── 2026년도 부산광역시 중소기업 자금지원계획 공고.pdf
 ```
 
 각 단계 폴더의 `README.md`를 번호 순서대로 진행합니다. `images/`에는 해당 단계의 화면 캡처를, `data/`에는 여러 단계에서 공통으로 사용하는 입력 자료를 둡니다.

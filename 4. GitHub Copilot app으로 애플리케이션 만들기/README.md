@@ -2,22 +2,30 @@
 
 이 단계에서는 완전히 빈 로컬 폴더에서 웹 애플리케이션을 만들고 앞 단계의 두 Foundry Agent를 연결합니다.
 
-## 빈 로컬 폴더 연결
+## GitHub Copilot app 확인
 
-1. Windows 파일 탐색기에서 문서 폴더를 엽니다.
-2. `policy-fund-app-<alias>`라는 새 폴더를 만들고 `<alias>`를 본인의 영문 alias로 바꿉니다.
+1. GitHub Copilot app을 실행합니다.
+2. 워크숍에서 사용할 GitHub 계정으로 로그인합니다.
+3. 왼쪽에 `Sessions` 메뉴와 `+` 버튼이 표시되는지 확인합니다.
 
-  ![Windows 파일 탐색기에서 새 로컬 앱 폴더 만들기](./images/create-local-app-folder.png)
+## 빈 로컬 폴더와 Agent 세션 만들기
 
-3. 폴더 안이 비어 있는지 확인합니다.
-4. GitHub Copilot app을 실행합니다.
-5. GitHub 계정으로 로그인되어 있는지 확인합니다.
-6. 왼쪽 `Sessions` 옆의 `+` 버튼을 클릭합니다.
-7. `Local folder or repository`를 선택합니다.
-8. 방금 만든 빈 폴더를 연결합니다.
-9. 새 세션의 실행 위치는 `local repository` 또는 현재 로컬 폴더를 선택합니다.
-10. 새 working tree나 cloud sandbox는 선택하지 않습니다.
-11. 세션 모드는 `Interactive`, 모델은 `Auto`를 선택합니다.
+1. GitHub Copilot app의 왼쪽 `Sessions` 옆에 있는 `+` 버튼을 클릭합니다.
+2. `Local folder or repository`를 선택합니다.
+
+    ![GitHub Copilot app에서 로컬 폴더 또는 저장소 추가](./images/copilot-add-local-project.png)
+
+3. Windows 폴더 선택기가 열리면 `문서` 폴더로 이동합니다.
+4. 폴더 선택기에서 `새 폴더`를 클릭합니다.
+5. 폴더 이름을 `policy-fund-app-<alias>`로 입력하고 `<alias>`를 본인의 영문 alias로 바꿉니다.
+
+    ![Windows 폴더 선택기에서 새 로컬 앱 폴더 만들기](./images/create-local-app-folder.png)
+
+6. 방금 만든 빈 폴더를 선택하고 `폴더 선택`을 클릭합니다.
+7. GitHub Copilot app에 해당 폴더가 프로젝트로 추가되었는지 확인합니다.
+8. 새 세션의 실행 위치는 `local repository` 또는 현재 로컬 폴더를 선택합니다.
+9. 새 working tree나 cloud sandbox는 선택하지 않습니다.
+10. 세션 모드는 `Interactive`, 모델은 `Auto`를 선택합니다.
 
 ## 화면과 모의 업무 흐름 만들기
 
@@ -75,16 +83,13 @@ Copilot이 파일 생성이나 명령 실행을 요청하면 내용을 확인하
 1. 브라우저에서 [Microsoft Foundry](https://ai.azure.com)를 열고 `bnk-workshop-<alias>` 프로젝트를 선택합니다.
 2. 상단 `Home`을 클릭합니다.
 3. 화면 아래 `Project endpoint` 옆의 복사 버튼을 클릭합니다.
-
-    ![Microsoft Foundry Home에서 Project endpoint 복사](../2.%20Azure%20구독%20및%20CLI%20설정/images/foundry-project-home.png)
-
 4. `API key`와 `Azure OpenAI endpoint`는 복사하지 않습니다.
-5. 상단 `Build` > 왼쪽 `Agents`로 이동해 앞 단계에서 만든 다음 두 Agent 이름을 확인합니다.
+5. 상단 `Build` > 왼쪽 `Agents`로 이동해 앞 단계에서 만든 다음 두 Agent가 목록에 있는지 확인합니다.
 
-    - `fund-recommender-<alias>`
-    - `branch-opinion-writer-<alias>`
+    - `fund-recommender`
+    - `branch-opinion-writer`
 
-6. 방금 확인한 값을 아래 프롬프트의 세 줄에 직접 붙여 넣습니다. 별도 메모장 파일로 저장하지 않습니다.
+6. 방금 복사한 프로젝트 엔드포인트를 아래 프롬프트의 `PROJECT_ENDPOINT` 줄에 직접 붙여 넣습니다. 별도 메모장 파일로 저장하지 않습니다.
 
 프로젝트 엔드포인트와 Agent 이름은 암호나 API 키가 아닙니다. 프로젝트 엔드포인트 끝에 `/openai/v1`이나 `/responses`를 추가하지 않습니다.
 
@@ -93,8 +98,8 @@ Copilot이 파일 생성이나 명령 실행을 요청하면 내용을 확인하
 
 연결 값:
 PROJECT_ENDPOINT=여기에 Foundry 프로젝트 엔드포인트
-RECOMMENDER_AGENT=여기에 추천 Agent 이름
-OPINION_AGENT=여기에 의견서 Agent 이름
+RECOMMENDER_AGENT=fund-recommender
+OPINION_AGENT=branch-opinion-writer
 
 구현 조건:
 - 최신 @azure/ai-projects와 @azure/identity, dotenv 패키지 사용

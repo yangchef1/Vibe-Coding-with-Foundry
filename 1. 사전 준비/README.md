@@ -16,16 +16,6 @@ git --version
 
 각 명령에 버전이 표시되는지 확인합니다. 명령을 찾을 수 없다면 사전 안내에 따라 해당 도구를 설치한 뒤 PowerShell을 다시 엽니다.
 
-## GitHub Copilot app 확인
-
-1. GitHub Copilot app을 실행합니다.
-2. 워크숍에서 사용할 GitHub 계정으로 로그인합니다.
-3. 왼쪽 `Sessions` 옆의 `+` 버튼을 클릭합니다.
-4. `Local folder or repository` 항목이 표시되는지 확인합니다.
-5. 새 Agent 세션을 시작할 수 있는지 확인한 뒤 실제 세션 생성은 다음 단계까지 보류합니다.
-
-![GitHub Copilot app에서 로컬 폴더 또는 저장소 추가](./images/copilot-add-local-project.png)
-
 ## Azure 및 Foundry 환경 확인
 
 다음 항목이 준비되어 있어야 합니다.
@@ -69,7 +59,7 @@ File Search에 필요한 역할과 할당 범위는 아래 `File Search 필수 �
 
 	![교육용 Azure 계정의 초기 비밀번호 입력](./images/azure-sign-in-password.png)
 
-4. 초기 비밀번호는 이 저장소, Copilot 대화, 메모장, 소스 코드에 입력하거나 저장하지 않습니다.
+4. 초기 비밀번호는 이 저장소, AI 대화, 메모장, 소스 코드에 입력하거나 저장하지 않습니다.
 5. 로그인 화면에서 비밀번호 변경을 요청하면 개인별 새 비밀번호로 변경합니다.
 6. MFA 등록을 요청하면 화면 안내에 따라 전화번호 또는 Microsoft Authenticator를 등록합니다.
 
@@ -162,24 +152,27 @@ File Search에 필요한 역할과 할당 범위는 아래 `File Search 필수 �
 
 ## 이름 규칙 확인
 
-Agent와 파일 이름이 충돌하지 않도록 모든 이름에 본인의 영문 alias를 붙입니다. 영문 alias는 소문자 영문과 숫자만 사용하고 공백, 한글, 특수문자는 제외합니다.
+Agent 이름은 Foundry 프로젝트 안에서 Agent를 식별하는 이름이며 Azure 전체에서 고유할 필요는 없습니다. 참가자마다 별도의 `bnk-workshop-<alias>` 프로젝트를 사용하므로 두 Agent 이름은 모두 동일하게 사용합니다.
+
+프로젝트, 지식 저장소, 로컬 폴더 이름에는 충돌을 피하도록 본인의 영문 alias를 붙입니다. 영문 alias는 소문자 영문과 숫자만 사용하고 공백, 한글, 특수문자는 제외합니다.
 
 영문 alias가 `heechulyang`이라면 다음과 같이 사용합니다.
 
 ```text
-fund-recommender-heechulyang
-branch-opinion-writer-heechulyang
+bnk-workshop-heechulyang
+fund-recommender
+branch-opinion-writer
 policy-funds-heechulyang
 policy-fund-app-heechulyang
 ```
 
 ## 정책자금 데이터 준비
 
-1. [워크숍용 정책자금 가상 데이터](../data/policy-funds-sample.md)를 엽니다.
-2. 파일을 로컬 컴퓨터에서 찾을 수 있는 위치에 준비합니다.
-3. 파일 첫 부분에 교육용 가상 데이터라는 안내가 있는지 확인합니다.
+1. [2026년도 부산광역시 중소기업 자금지원계획 공고.pdf](../data/2026년도%20부산광역시%20중소기업%20자금지원계획%20공고.pdf)를 엽니다.
+2. PDF가 정상적으로 열리고 내용을 조회할 수 있는지 확인합니다.
+3. 파일을 로컬 컴퓨터에서 찾을 수 있는 위치에 준비합니다.
 
-이 파일은 Foundry File Search에 업로드합니다. GitHub Copilot app에서 만들 애플리케이션의 빈 폴더에는 미리 넣지 않습니다.
+이 파일은 Foundry File Search에 업로드합니다. 4단계에서 만들 애플리케이션의 빈 폴더에는 미리 넣지 않습니다.
 
 > 실습에서는 실제 고객 정보, 주민등록번호, 계좌번호, 암호를 입력하지 않습니다.
 
