@@ -14,7 +14,21 @@ git --version
 
 ![PowerShell에서 Node.js, npm, Git 버전 확인](./images/verify-local-tools.png)
 
-각 명령에 버전이 표시되는지 확인합니다. 명령을 찾을 수 없다면 사전 안내에 따라 해당 도구를 설치한 뒤 PowerShell을 다시 엽니다.
+각 명령에 버전이 표시되는지 확인합니다. 명령을 찾을 수 없다면 아래에서 필요한 명령을 복사해 실행합니다.
+
+**Node.js와 npm이 설치되지 않은 경우**
+
+```powershell
+winget install --id OpenJS.NodeJS.LTS -e --source winget
+```
+
+**Git이 설치되지 않은 경우**
+
+```powershell
+winget install --id Git.Git -e --source winget
+```
+
+설치가 끝나면 열려 있는 PowerShell을 모두 닫고 새 PowerShell을 엽니다. `node --version`, `npm --version`, `git --version`을 다시 실행해 각 버전이 표시되는지 확인합니다.
 
 ## Azure 및 Foundry 환경 확인
 
@@ -34,19 +48,19 @@ File Search에 필요한 역할과 할당 범위는 아래 `File Search 필수 �
 
 `hackathonsub01`은 진행자의 기능 테스트용 구독입니다.
 
-참가자는 아래 표에서 안내받은 계정과 구독을 사용합니다. 각 계정에는 해당 구독의 `소유자` 권한이 할당되어 있습니다.
+참가자는 아래 표에서 본인에게 배정된 계정과 구독을 사용합니다. 각 계정에는 해당 구독의 `소유자` 권한이 할당되어 있습니다.
 
-| Azure 구독 | 교육용 Azure 계정 | 구독 권한 |
-|---|---|---|
-| `hackathonsub02` | `testuser04@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub02` | `testuser05@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub02` | `testuser06@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub03` | `testuser07@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub03` | `testuser08@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub03` | `testuser09@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub04` | `testuser10@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub04` | `testuser11@bnksyscokr.onmicrosoft.com` | 소유자 |
-| `hackathonsub04` | `testuser12@bnksyscokr.onmicrosoft.com` | 소유자 |
+| 참가자 | Azure 구독 | 교육용 Azure 계정 | 구독 권한 |
+|---|---|---|---|
+| Jongsuk Oh | `hackathonsub02` | `testuser04@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Subok Kim | `hackathonsub02` | `testuser05@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Hyungu Lee | `hackathonsub02` | `testuser06@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Seokgyo Ko | `hackathonsub03` | `testuser07@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Seungtaek Oh | `hackathonsub03` | `testuser08@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Dongmin Park | `hackathonsub03` | `testuser09@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Jingyu Heo | `hackathonsub04` | `testuser10@bnksyscokr.onmicrosoft.com` | 소유자 |
+| Haseok Jang | `hackathonsub04` | `testuser11@bnksyscokr.onmicrosoft.com` | 소유자 |
+| 예비 계정 | `hackathonsub04` | `testuser12@bnksyscokr.onmicrosoft.com` | 소유자 |
 
 ### 초기 로그인 안내
 
